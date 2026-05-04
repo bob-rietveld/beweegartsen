@@ -25,4 +25,5 @@ jobs:
         env:
           BASSH_API: ${{ secrets.BASSH_API }}
           BASSH_KEY: ${{ secrets.BASSH_KEY }}
-        run: bassh ${{ env.DEPLOY_DIR }} -n ${{ env.PROJECT_NAME }}
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+        run: bassh "${DEPLOY_DIR}" -n "${PROJECT_NAME}" -p "${SITE_PASSWORD}"
