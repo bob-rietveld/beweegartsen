@@ -9,8 +9,10 @@ Statische site (geen build step). Pure HTML in de root, CSS in `assets/css/`, JS
 De site wordt gedeployed naar [bassh](https://github.com/get-bassh/bassh). Het is een one-command static-site deployer.
 
 - **Project name:** `beweegartsen`
-- **CI:** `.github/workflows/deploy.yml` draait `bassh . -n beweegartsen` op elke push naar `main`. Credentials komen uit GitHub Actions secrets `BASSH_API` en `BASSH_KEY`.
-- **Lokaal:** CLI staat in `~/.local/bin/bassh`. Credentials in `~/.bashrc` (`BASSH_API`, `BASSH_KEY`) — zsh laadt die niet automatisch, dus voor een lokale run: `source ~/.bashrc && bassh ...` (of run via `bash -c`).
+- **Live URL:** https://lon-beweegartsen.pages.dev
+- **Wachtwoord:** AES-256-GCM bescherming actief, handmatig gezet via `bassh . -n beweegartsen -p <wachtwoord>` (waarde niet in git — vraag aan user). Niet via CI; zie waarschuwing onder.
+- **CI:** `.github/workflows/deploy.yml` draait `bassh . -n beweegartsen` op elke push naar `main`. Credentials komen uit GitHub Actions secrets `BASSH_API` en `BASSH_KEY`. **Let op:** de CI run heeft geen `-p` flag, dus een push naar `main` verwijdert de wachtwoordbescherming. Voeg `BASSH_PASSWORD` secret toe en pas `deploy.yml` aan voor automatische bescherming.
+- **Lokaal:** CLI staat in `~/.local/bin/bassh`. PATH + credentials (`BASSH_API`, `BASSH_KEY`) staan in `~/.bashrc`; `~/.zshenv` sourcet `~/.bashrc` zodat zowel bash als zsh (login én non-interactive) `bassh` direct kunnen aanroepen.
 
 ### Veelgebruikte commands
 
