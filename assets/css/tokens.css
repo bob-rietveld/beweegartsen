@@ -40,6 +40,27 @@
   --font-sans:  "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono:  "JetBrains Mono", ui-monospace, Menlo, monospace;
 
+  /* Radii */
+  --r-sm: 8px;     /* dropdown items */
+  --r-md: 10px;    /* photo frames, inputs */
+  --r-lg: 14px;    /* cards, treat grid */
+  --r-xl: 18px;    /* visit panel, modal, contact card */
+  --r-pill: 999px; /* buttons, chips, toggles */
+
+  /* Semantic aliases */
+  --bg:           var(--cream-50);
+  --bg-elevated:  var(--paper);
+  --bg-deep:      var(--cream-100);
+  --bg-inverse:   var(--ink-900);
+  --fg:           var(--gray-900);
+  --fg-muted:     var(--gray-700);
+  --fg-subtle:    var(--gray-500);
+  --fg-inverse:   var(--paper);
+  --accent:       var(--ink-700);  /* CTA / link */
+  --accent-hover: var(--ink-800);
+  --accent-soft:  var(--ink-50);
+  --emphasis:     var(--ink-500);  /* italic word in headlines */
+
   /* Density */
   --space-unit: 1;
 }
