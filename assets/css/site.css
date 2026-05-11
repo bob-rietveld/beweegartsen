@@ -54,8 +54,8 @@ body { background: var(--cream-50); }
 .bw-btn-primary { background: var(--ink-700); color: var(--paper); }
 .bw-btn-primary:hover { background: var(--ink-800); }
 .bw-btn-primary:disabled { background: var(--ink-300); cursor: not-allowed; }
-.bw-btn-ghost { background: transparent; color: var(--ink-700); border-color: var(--line-strong); }
-.bw-btn-ghost:hover { background: var(--ink-50); border-color: var(--ink-200); }
+.bw-btn-ghost { background: var(--ink-500); color: var(--paper); border-color: var(--ink-500); }
+.bw-btn-ghost:hover { background: #2a6f99; border-color: #2a6f99; }
 .bw-btn-secondary {
   background: var(--paper); color: var(--ink-700);
   border-color: var(--line); box-shadow: var(--shadow-sm);
